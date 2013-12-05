@@ -1,0 +1,419 @@
+<!doctype html>
+<!--PAGES:
+	Page0--Back Story/welcome page
+	Page1--Help Page
+	Page2--Quit
+	Page3--User Setup
+	Page4--Library
+	Page5--Food Court
+	Page6--Garden
+	Page7--Dinosaur Exhibit
+	Page8--Bathroom
+	Page9--Storage Closet
+	Page10--Balcony
+	Page11--Death by Food Court
+	Page12--Death by Garden
+	Page13--Death by Dinosaur Exhibit
+	Page14--WINNER
+	Page15--Death by Balcony
+-->
+<html>
+<head>
+	<title> The Great Escape </title>
+		<script type="text/javascript" src="finalGame.js"></script>
+		<style type="text/css">
+    			body { text-align: center; }
+    		    div { display: none; }
+ 		</style>
+</head>
+<body style="background-color:black" onload="start();"> 
+	<h1 style="text-align:center"> 
+	<font face="algerian">
+	<font color="lightgreen">	
+		The Great Escape	
+	</font>
+	</h1>
+<div id="page0"> <!--Back Story -->
+	<FONT COLOR="white">
+	<h2>Welcome</h2>
+	<img src="http://guides.gamepressure.com/dragonageorigins/gfx/word/92806828.jpg" alt="Map">
+	<p style="text-align:center">
+		<FONT face="bookman">
+		You are a typical museum enthusiast, always wanting to learn new things. One day you decide 
+		to go an Ancient Artifact Museum which is brand new. You get there only to see that 
+		there is hardly anyone at this museum, you brush this observation to the side and begin to 
+		explore the many exhibits and rooms they have. All of the sudden the lights go off and all the 
+		doors shut, and a mysterious voice comes over the intercom system saying that the museum is 
+		currently under quarantine and is being gassed for sanitation purposes. This gas is poisonous 
+		and if you inhale to much you will die. It is your job to find your way out the museum before you 
+		have inhaled too much of the gas. You can find your way out by finding keys which will unlock 
+		doors for you to find your way out. 
+		</font>	
+		</font>
+	</p>
+	<h1 style="text-align:center">
+		<font color="red">
+		<font face="algerian">
+		Do you have what it takes?
+		</font>
+		</font>
+	</h1>
+	<br>
+	<input type="button" value="How to Play" onclick="changePage(0,1);">
+	<input type="button" value="Click to Play" onclick="changePage(0,3);">
+	<input type="button" value="Quit" onclick="changePage(0,2);">
+	<div id="outputDiv" style="display:none"></div>
+</div>
+<div id="page1"> <!--Help Page-->
+	<h2 style="text-align:center">
+		<FONT FACE="algerian">
+		<font color="white">		
+		How to Play
+		</font>
+		</font>
+	</h2>
+	<p style="text-align:center">
+		<font color="white">
+		<font face="bookman">
+		<body style="background-color:darkblue">
+		<img src="help.jpg" alt="Help" height="200" width="200">
+		<h4>
+		As you begin your journey to safety in hopes of escaping the library, here are a few tips:
+		<br>
+		1. Follow the directions carefully.
+		<br>
+		2. Click on the action you would like to take in the game. 
+		<br>
+		3. You may quit the game at any time by pressing the quit button on the bottom of the page.
+		<br>
+		</font></fonT>
+		</h4>
+		<input type="button" value="Return to Welcome Page" onclick="changePage(1,0);">
+		<div id="outputDiv" style="display:none"></div>
+	</p></div></div>
+<div id="page2"> <!--Quit -->
+	<FONT FACE="algerian">
+	<FONT color="white">
+	<h1 style="text-align:center">
+		Well maybe next time you'll have what it takes to make 
+		</font>
+		<br>
+		<font color="red">
+		THE GREAT ESCAPE
+		</font>
+	</h1>
+	</font>
+</div>
+<div id="page3"> <!--User SetUp-->
+	<font color="white">
+	<h1 style="text-align:center">
+		<FONT FACE="algerian">
+		Welcome
+		</font>
+	</h1>
+	<p>
+	Please provide your name:
+	<input type="text" id="nameBox" size="12" value="">
+	<input type="button" value="Enter Name"
+		onclick="document.getElementById('outputDiv').innerHTML=begin();">
+	<hr>
+	<input type="button" value="What's Next?" onclick="changePage(3,4);">
+	<br>
+	<input type="button" value="Quit" onclick="changePage(0,2);">
+</p></font></div>
+<div id="page4"> <!--Library-->
+	<h1 style="text-align:center">
+		<FONT FACE="algerian">
+		<font color="white">
+		The Library
+		</font>
+		</font>
+	</h1>
+		<font color="white">
+	<body style="background-color:olive">
+	<img src="library.jpg" alt="Library" height="500" width="500">
+	<p>
+		Without a map you have no idea which way is up or down. You're essentially lost. Your options are to either
+		<br>
+		1. Stay in the library and look around
+		<br>
+		2. Choose an unknown door to go through
+		<br>
+		Not too many options...but time is of the essence. Better think fast!
+		<br>
+	<input type="button" value="Stay in the library"
+		onclick="document.getElementById('outputDiv').innerHTML=lookInLibrary();">
+	<input type="button" value="Door 1"
+		onclick="changePage(4,5);">
+	<input type="button" value="Door 2"
+		onclick="changePage(4,6);;">
+		<input type="button" value="Door 3"
+		onclick="changePage(4,7);;">
+	<br>
+	<input type="button" value="Quit" onclick="changePage(0,2);">
+	</p></font></body>
+</div>
+<div id="page5"> <!--Food Court-->
+	<h1 style="text-align:center">
+		<FONT FACE="algerian">
+		<font color="white">
+		The Food Court
+		</font>
+		</font>
+	</h1>
+		<font color="white">
+	<body style="background-color:olive">
+	<img src="foodcourt.jpg" alt="FoodCourt" height="500" width="500">
+	<p>
+		This is the main cafeteria of the Museum. 
+		There is not a single sole in sight, there are unfinished trays of food lying on the tables. 
+		The neon lights are still ablaze and lighting up the massive room.
+		With room being so large, there must be a key somewhere?
+		But you better hurry, you're running out of time!	
+		<br>
+		1. Take a break and have something to eat. 
+		<br>
+		2. Take a look around the food court in hopes of finding a key.
+		<br>
+		3.Travel north to the bathroom. 
+		<br>
+		4.Travel south back to the library.
+		<br>
+		Your choice!
+		<br>
+	<input type="button" value="Have Something to Eat"
+		onclick="changePage(5,11);">
+	<input type="button" value="Take a Look Around"
+		onclick="keyFound()">
+	<input type="button" value="Go North"
+		onclick="changePage(5,8);">
+	<input type="button" value="Go South"
+		onclick="changePage(5,4);">
+	<br>
+		<input type="button" value="Quit" onclick="changePage(0,2);">
+	</p></font></body>
+</div>
+<div id="page6"> <!--Garden-->
+	<h1 style="text-align:center">
+		<FONT FACE="algerian">
+		<font color="white">
+		The Garden
+		</font>
+		</font>
+	</h1>
+		<font color="white">
+	<img src="atrium.jpg" alt="garden">
+	<p>
+		Welcome to the garden! You have the following options...
+		<br>
+		1. Take a break and have a seat on the stairs. 
+		<br>
+		2. Take a look around the food court in hopes of finding a key.
+		<br>
+		3.Travel east to the balcony. 
+		<br>
+		4.Travel west back to the library.
+		<br>
+		Your choice!
+		<br>
+	<input type="button" value="Take a Break"
+		onclick="changePage(6,12);">
+	<input type="button" value="Take a Look Around"
+		onclick="keyFound()">
+	<input type="button" value="Go East"
+		onclick="changePage(6,10);">
+	<input type="button" value="Go West"
+		onclick="changePage(6,4);">
+	<br>
+	<input type="button" value="Quit" onclick="changePage(0,2);">
+	</p></font></body></div>
+<div id="page7"> <!--Dinosaur Exhibit-->
+	<h1 style="text-align:center">
+		<FONT FACE="algerian">
+		<font color="white">
+		The Dinosaur Exhibit
+		</font>
+		</font>
+	</h1>
+		<font color="white">
+	<img src="dinosaur.jpg" alt="Dinosaur Exhibit">
+	<p>
+		Welcome to the dinosaur exhibit! You have the following options...
+		<br>
+		1. Check out the T-Rex. 
+		<br>
+		2. Look around the exhibit.
+		<br>
+		3.Travel south to the storage closet. 
+		<br>
+		4.Travel north back to the library.
+		<br>
+		Your choice!
+		<br>
+	<input type="button" value="Check out the T-Rex"
+		onclick="changePage(7,13);">
+	<input type="button" value="Take a Look Around"
+		onclick="keyFound()">
+	<input type="button" value="Go South"
+		onclick="changePage(7,9);">
+	<input type="button" value="Go North"
+		onclick="changePage(7,4);">
+	<br>
+		<input type="button" value="Quit" onclick="changePage(0,2);">
+
+	</p></font></body></div>
+<div id="page8"> <!--Bathroom-->
+	<h1 style="text-align:center">
+		<FONT FACE="algerian">
+		<font color="white">
+		The Lavatory
+		</font>
+		</font>
+	</h1>
+		<font color="white">
+	<img src="bathroom.jpg" alt="Bathroom">
+	<p>
+		You have entered the main lavatory for the museum, its empty... nobody is inside.
+		The toilets work and the sinks have clear water running through their pipes. 
+		There are no exits within in the bathroom. But are there any keys in the bathroom? 		
+		<br>
+		1. Look around the lavatory.
+		<br>
+		2.Travel south back to the food court. 
+		<br>
+	<input type="button" value="Take a Look Around"
+		onclick="lookInLibrary()">
+	<input type="button" value="Go South"
+		onclick="changePage(8,5);">
+	<br>
+	<input type="button" value="Quit" onclick="changePage(0,2);">
+
+	</p></font></body></div>
+<div id="page9"> <!--Storage Closet-->
+	<h1 style="text-align:center">
+		<FONT FACE="algerian">
+		<font color="white">
+		The Storage Closet
+		</font>
+		</font>
+	</h1>
+		<font color="white">
+	<img src="storage.jpg" alt="Storage Closet">
+	<p>
+		It is an extremely tight spot...but here are your options:	
+		<br>
+		1. Look around the closet.
+		<br>
+		2.Travel north back to the dinosaur exhibit. 
+		<br>
+	<input type="button" value="Take a Look Around"
+		onclick="changePage(9,14);">
+	<input type="button" value="Go North"
+		onclick="changePage(9,7);">
+	<br>
+		<input type="button" value="Quit" onclick="changePage(0,2);">
+
+	</p></font></body></div>
+<div id="page10"> <!--Balcony-->
+	<h1 style="text-align:center">
+		<FONT FACE="algerian">
+		<font color="white">
+		The Balcony
+		</font>
+		</font>
+	</h1>
+		<font color="white">
+	<img src="balcony.jpg" alt="Balcony">
+	<p>
+		Welcome to the balcony. Isn't it a great view? 
+		<br>
+		1. Look around the balcony.
+		<br>
+		2. Look over the balcony.		
+		<br>
+		3. Travel west back to the garden.
+		<br>
+	<input type="button" value="Take a Look Around"
+		onclick="keyFound();">
+	<input type="button" value="Look over Balcony"
+		onclick="changePage(10,15);">
+	<input type="button" value="Travel West"
+		onclick="changePage(10,6);">
+	<br>
+		<input type="button" value="Quit" onclick="changePage(0,2);">
+
+	</p></font></body></div>
+<div id="page11"> <!--Death by Food Court-->
+	<h1 style="text-align:center">
+		<FONT FACE="algerian">
+		<font color="white">
+		GAME OVER
+		</font>
+		</font>
+	</h1>
+		<font color="white">
+	<img src="poison.png" alt="Poison" height="200" width="200">
+	<p>
+		The food was poisoned...Bad decision to take a break when the stakes were so high!
+	<br>
+
+	</p></font></body></div>
+<div id="page13"> <!--Death by Dinosaur Exhibit-->
+	<h1 style="text-align:center">
+		<FONT FACE="algerian">
+		<font color="white">
+		GAME OVER
+		</font>
+		</font>
+	</h1>
+		<font color="white">
+	<img src="dinosaur2.jpg" alt="Dinosaur">
+	<p>
+	Your worst nightmare...the T-Rex has come alive, and I think you know where it goes from there...
+	<br>
+	</p></font></body></div>
+<div id="page12"> <!--Death by Garden-->
+	<h1 style="text-align:center">
+		<FONT FACE="algerian">
+		<font color="white">
+		GAME OVER
+		</font>
+		</font>
+	</h1>
+		<font color="white">
+	<img src="stairs.jpg" alt="Stairs">
+	<p>
+	Taking a break on the stairs wasn't your best decision...the poisonous gas took a toll on you.
+	<br>
+	</p></font></body></div>
+<div id="page14"> <!--Winner-->
+	<h1 style="text-align:center">
+		<FONT FACE="algerian">
+		<font color="yellow">
+		CONGRATULATIONS!!
+		</font>
+		</font>
+	</h1>
+		<font color="white">
+	<img src="keyd.png" alt="Key">
+	<p>
+	You found the magic key and are now on your way to safety. 
+	<br>
+	YOU MADE THE GREAT ESCAPE!!
+	</p></font></body></div>
+<div id="page15"> <!--Death by Balcony-->
+	<h1 style="text-align:center">
+		<FONT FACE="algerian">
+		<font color="white">
+		GAME OVER
+		</font>
+		</font>
+	</h1>
+		<font color="white">
+	<img src="gameover.jpg" alt="Game Over">
+	<p>
+	While looking over the city from the balcony, you accidentally tripped. Now, unfortunately, the game is over for you.
+	<br>
+	</p></font></body></div>
+</body>
+</html>
